@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
 body {
     margin: 0;
     padding: 0;
@@ -12,17 +14,27 @@ code {
 font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-  
-.container {
-	max-width: 600px;
-	margin: 0 auto;
-	margin-top: 100px;
+
+.header {
+  font-family: 'Open Sans', 'Arial', sans-serif; 
+  font-size: 36px;
+  font-weight: 300;
+	text-align: center;
+  margin-top: 80px;
+  margin-bottom: 56px;
+  line-height: 48px;
 }
 
-h1 {
-	margin-bottom: 50px;
+.item-list {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
 }
 
-li {
-	margin-bottom: 20px;
+.item-list li {
+  width: 224px;
+  list-style: none;
 }
