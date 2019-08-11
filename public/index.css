@@ -32,9 +32,12 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.item-list li {
-  width: 224px;
-  list-style: none;
+.starFill {
+  display: inline-block;
+  width: 14px;
+  height: 13px;
+  background-image: url('assets/star.svg');
 }
