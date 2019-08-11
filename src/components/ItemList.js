@@ -1,26 +1,24 @@
 import React from 'react';
 import ProductItem from './ProductItem'
 
-const ratingComponent = () => {
-  return <div className="starFill"/>;
+const ratingComponent = ({ isFilled }) => {
+  return <div className={isFilled && "starFill"} />;
 };
 
 function ItemList({ data }) {
 
-	let items = data.map(item =>{
-		let data = JSON.parse(item)
-				
-		return <ProductItem 
-			key={data.title}
-			isInStock={data.isInStock}
-			img={data.img}
-			title={data.title}
-			price={data.price}
+	let items = data.map(item =>
+		<ProductItem 
+			key={item.title}
+			isInStock={Boolean(item.isInStock)}
+			img={item.img}
+			title={item.title}
+			price={item.price}
 			subPriceContent=" ₽"
-			maxRating={data.maxRating}
-			rating={data.rating}
+			maxRating={Number(item.maxRating)}
+			rating={Number(item.rating)}
 			ratingComponent={ratingComponent} />
-		});
+		);
 	
 	return <div className='item-list'>{items}</div>
 }

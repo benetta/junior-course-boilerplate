@@ -15,7 +15,7 @@
         "price": "5 000",
         "rating": "4",
         "maxRating": "5",
-        "isInStock": "false"
+        "isInStock": ""
     },
     {
         "id": "3",
@@ -51,6 +51,6 @@
         "price": "124 000",
         "rating": "4",
         "maxRating": "5",
-        "isInStock": "false"
+        "isInStock": ""
     }
 ]

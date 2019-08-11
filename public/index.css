@@ -35,6 +35,10 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
   justify-content: space-between;
 }
 
+.item-list > div {
+  margin-bottom: 50px;
+}
+
 .starFill {
   display: inline-block;
   width: 14px;
