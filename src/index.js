@@ -1,19 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import data from './products.json';
 
+import Header from './components/Header'
+import ItemList from './components/ItemList'
+
 class App extends Component {
 	render() {
-	let items = data.slice(0, 3).map(item => 
-		<li key={item.id}>{item.name}</li> 
-	);
-
-	return (
-			<div className='container'>
-				<h1>Список товаров</h1>
-				<ul>{items}</ul>
-			</div>
-			)
+	const title = "Список товаров"
+	
+		return (
+			<Fragment>
+				<Header>{title}</Header>
+				<ItemList data={data} />
+			</Fragment>
+		)
 	}
 }
 

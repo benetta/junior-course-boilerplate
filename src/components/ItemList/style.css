@@ -1,0 +1,14 @@
+.item-list {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.item {
+	list-style: none;
+  margin-bottom: 50px;
+}
