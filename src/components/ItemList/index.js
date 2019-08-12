@@ -9,7 +9,7 @@ const ratingComponent = ({ isFilled }) => {
 
 function ItemList({ data }) {
 
-	let items = data.map(item =>
+	const items = data.map(item =>
 		<li className='item' key={item.id}><ProductItem
 			isInStock={Boolean(item.isInStock)}
 			img={item.img}

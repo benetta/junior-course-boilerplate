@@ -7,9 +7,11 @@ import ItemList from './components/ItemList'
 
 class App extends Component {
 	render() {
+	const title = "Список товаров"
+	
 		return (
 			<Fragment>
-				<Header title="Список товаров" />
+				<Header>{title}</Header>
 				<ItemList data={data} />
 			</Fragment>
 		)
