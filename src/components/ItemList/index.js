@@ -1,5 +1,7 @@
 import React from 'react';
-import ProductItem from './ProductItem'
+import ProductItem from 'csssr-school-product-card';
+
+import './style.css'
 
 const ratingComponent = ({ isFilled }) => {
   return <div className={isFilled && "starFill"} />;
@@ -8,8 +10,7 @@ const ratingComponent = ({ isFilled }) => {
 function ItemList({ data }) {
 
 	let items = data.map(item =>
-		<ProductItem 
-			key={item.title}
+		<li className='item' key={item.id}><ProductItem
 			isInStock={Boolean(item.isInStock)}
 			img={item.img}
 			title={item.title}
@@ -17,10 +18,10 @@ function ItemList({ data }) {
 			subPriceContent=" ₽"
 			maxRating={Number(item.maxRating)}
 			rating={Number(item.rating)}
-			ratingComponent={ratingComponent} />
+			ratingComponent={ratingComponent} /></li>
 		);
 	
-	return <div className='item-list'>{items}</div>
+	return <ul className='item-list'>{items}</ul>
 }
 
 export default ItemList

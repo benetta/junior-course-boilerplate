@@ -9,7 +9,7 @@ class App extends Component {
 	render() {
 		return (
 			<Fragment>
-				<Header />
+				<Header title="Список товаров" />
 				<ItemList data={data} />
 			</Fragment>
 		)
